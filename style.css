@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 350px;
+    background-color: rgba(0, 0, 0, 0.906);
+}
+
+/*  logo netflix */
+.nav_logo {
+    width: 130px;
+}
+
+/* icona utente (navbar) */
+#user_icon {
+    height: 30px;
+    width: 30px;
+    background-image: url(assets/icon/user/168726.png);
+    background-size: cover;
+}
+
+/* responsive navbar */
+
+@media screen and (min-width:992px) {
+    #nav_user_container {
+        display: flex !important;
+    }
+}
+
+@media screen and (max-width:991px) {
+    #nav_user_container1 {
+        display: flex !important;
+        flex-direction: row;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    .dropdown-menu {
+        position: absolute !important;
+        transform: translate(-100px, 0) !important;
+    }
+}
+
+/* icone visualizzazione pagina */
+.view_icon span {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 575px){
+  .view_container{
+    display: none;
+  }
+}
+
+/* animazione user dropdown (navbar) */
+.dropdown-menu li>a:hover {
+    text-decoration:underline;
+}
+
+/* animazioni link */
+.hover_link:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.hover_icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* immagini anteprima film */
+.container_movies img {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+}
+
+/* animazioni immagini film */
+.container_movies div:hover img{
+    transform: scale(1.05) !important;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.movie_start > span {
+    font-size: 3em;
+}
+.movie_start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.container_movies div:hover .movie_start {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+.movie_start:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* footer */
+#footer_icon img {
+    width: 30px;
+}
+
+@media screen and (max-width: 600px){
+    footer {
+      font-size: 0.7rem;
+      color: red;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    transform: translateX(-120px);
+}
+
